@@ -5,20 +5,20 @@
 class Teller < Formula
   desc "CLI for STX"
   homepage "https://github.com/hashhavoc/teller"
-  version "0.0.12"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hashhavoc/teller/releases/download/v0.0.12/teller_v0.0.12_darwin_amd64.tar.gz"
-      sha256 "3426e8447186436ee4f7334ee0111fcf18f7dd36a5b57d8b6e968544049298a5"
+      url "https://github.com/hashhavoc/teller/releases/download/v0.1.0/teller_v0.1.0_darwin_amd64.tar.gz"
+      sha256 "0fc55bb18cea9559a344fe1e5014f6d6272098373e49954697105492eb11066f"
 
       def install
         bin.install "teller"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hashhavoc/teller/releases/download/v0.0.12/teller_v0.0.12_darwin_arm64.tar.gz"
-      sha256 "264dd9aa5125bd279cf792e83326495ef6c1dc16c0fa0a5065595470dd07609e"
+      url "https://github.com/hashhavoc/teller/releases/download/v0.1.0/teller_v0.1.0_darwin_arm64.tar.gz"
+      sha256 "00456b09003d3def74996d5fb8b6d720a95c04ab65573db711ce000b7b97e1fc"
 
       def install
         bin.install "teller"
@@ -28,16 +28,16 @@ class Teller < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/hashhavoc/teller/releases/download/v0.0.12/teller_v0.0.12_linux_amd64.tar.gz"
-      sha256 "5ace8c931356d0c592323d5894c16dcbe6c24f481e5f450ba2284d7537802bef"
+      url "https://github.com/hashhavoc/teller/releases/download/v0.1.0/teller_v0.1.0_linux_amd64.tar.gz"
+      sha256 "dabeb54339e9dd27893f3e34365d6da561f91138e514ca1c4cda1ebd777cc8e6"
 
       def install
         bin.install "teller"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hashhavoc/teller/releases/download/v0.0.12/teller_v0.0.12_linux_arm64.tar.gz"
-      sha256 "248f7e2f4b6830434a7abd5d894c0d7b6c988000346e39b18e1135eb4be843d8"
+      url "https://github.com/hashhavoc/teller/releases/download/v0.1.0/teller_v0.1.0_linux_arm64.tar.gz"
+      sha256 "665e87b5ae38a19677c65bc153f64f65712a2a7cfe76451dab829eccfb866552"
 
       def install
         bin.install "teller"

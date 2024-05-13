@@ -5,20 +5,20 @@
 class Teller < Formula
   desc "CLI for STX"
   homepage "https://github.com/hashhavoc/teller"
-  version "0.0.18"
+  version "0.0.19"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/hashhavoc/teller/releases/download/v0.0.18/teller_v0.0.18_darwin_amd64.tar.gz"
-      sha256 "b0f8ee5da6245995e7dab20a198b14f882ce631464a0e929f03c37091c7dca30"
+    on_intel do
+      url "https://github.com/hashhavoc/teller/releases/download/v0.0.19/teller_v0.0.19_darwin_amd64.tar.gz"
+      sha256 "96c8757f132a7b210e1e6567341086967212881976ccfa66cdf8e5730d1c1564"
 
       def install
         bin.install "teller"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/hashhavoc/teller/releases/download/v0.0.18/teller_v0.0.18_darwin_arm64.tar.gz"
-      sha256 "cb4c2104f7daf3ee6ffae54c344a0135d2884e2cb5510a1b6f1c468bbe6a8be9"
+    on_arm do
+      url "https://github.com/hashhavoc/teller/releases/download/v0.0.19/teller_v0.0.19_darwin_arm64.tar.gz"
+      sha256 "7a78313e2b8dc20e443a7053f90d94d8634ec408c47056c3b2394ba37afe7b5c"
 
       def install
         bin.install "teller"
@@ -27,20 +27,24 @@ class Teller < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/hashhavoc/teller/releases/download/v0.0.18/teller_v0.0.18_linux_amd64.tar.gz"
-      sha256 "e9515f894904940bc8605d7188a6f2e5a00bdde9261681b801ee45d6cd54819e"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/hashhavoc/teller/releases/download/v0.0.19/teller_v0.0.19_linux_amd64.tar.gz"
+        sha256 "63f0aa0075e9b37cd0742d4fac94b67c3161144bcdd15fb235c43f32df891a93"
 
-      def install
-        bin.install "teller"
+        def install
+          bin.install "teller"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hashhavoc/teller/releases/download/v0.0.18/teller_v0.0.18_linux_arm64.tar.gz"
-      sha256 "eb373e699e29dfe17c679169c2c38eda35ff752b8961b9c44f6454db157ce864"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/hashhavoc/teller/releases/download/v0.0.19/teller_v0.0.19_linux_arm64.tar.gz"
+        sha256 "f159bdcdad0cd8460e0d7712fec5d3e55c9d74ce70e0388e80a50115dfe97f28"
 
-      def install
-        bin.install "teller"
+        def install
+          bin.install "teller"
+        end
       end
     end
   end

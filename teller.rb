@@ -5,20 +5,20 @@
 class Teller < Formula
   desc "CLI for STX"
   homepage "https://github.com/hashhavoc/teller"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
     on_intel do
-      url "https://github.com/hashhavoc/teller/releases/download/v0.2.0/teller_v0.2.0_darwin_amd64.tar.gz"
-      sha256 "60c080f4b947d2d2bb0699b89f8196c9b3257216412e0850d412ebc9e74e2f53"
+      url "https://github.com/hashhavoc/teller/releases/download/v0.2.1/teller_v0.2.1_darwin_amd64.tar.gz"
+      sha256 "316f40cbfbc1cdf33ca7dff9d8d1dfe188dffe6a3fc47622cddf3198b172b7e1"
 
       def install
         bin.install "teller"
       end
     end
     on_arm do
-      url "https://github.com/hashhavoc/teller/releases/download/v0.2.0/teller_v0.2.0_darwin_arm64.tar.gz"
-      sha256 "0a06aa88f948deb8ea35adda23d34be048e7b0ab92ba133d40250005b6607b7f"
+      url "https://github.com/hashhavoc/teller/releases/download/v0.2.1/teller_v0.2.1_darwin_arm64.tar.gz"
+      sha256 "b65e6f83a9bbfda5d39c3a32338e75707ca1eafc90175ced3cb058b072b76470"
 
       def install
         bin.install "teller"
@@ -29,8 +29,8 @@ class Teller < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hashhavoc/teller/releases/download/v0.2.0/teller_v0.2.0_linux_amd64.tar.gz"
-        sha256 "b498231a1b8195352d55eca8596794d7e762dd046472961d8ead63d3d3adcd91"
+        url "https://github.com/hashhavoc/teller/releases/download/v0.2.1/teller_v0.2.1_linux_amd64.tar.gz"
+        sha256 "3a3648ffc4bebc58fb1c9feb994dc12ead2d73ee8c4c441c653e8a67de9171e9"
 
         def install
           bin.install "teller"
@@ -39,8 +39,8 @@ class Teller < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hashhavoc/teller/releases/download/v0.2.0/teller_v0.2.0_linux_arm64.tar.gz"
-        sha256 "9544436151597d3f4938fbf3fd725ffe9cc56505b8e4b36811f4fa47893b4b95"
+        url "https://github.com/hashhavoc/teller/releases/download/v0.2.1/teller_v0.2.1_linux_arm64.tar.gz"
+        sha256 "cc8dc05fc4f59db86c447b688027ed812648727bbb16a280f62f4b43012218cb"
 
         def install
           bin.install "teller"
